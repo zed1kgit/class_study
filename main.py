@@ -1,6 +1,6 @@
 class Vehicle:
 
-    def __init__(self, name, mileage):
+    def __init__(self, name, mileage: int):
         self.name = name
         self.mileage = mileage
 
@@ -14,3 +14,13 @@ class Vehicle:
         else:
             return "Я не знаю таких ТС"
         return f"Это {vehicle_type} марки {self.name}"
+
+    def get_vehicle_advice(self):
+        if self.mileage <= 50000:
+            return f"Неплохо {self.name} можно брать."
+        elif self.mileage <= 100000:
+            return f"{self.name} надо внимательно проверить."
+        elif self.mileage <= 150000:
+            return f"{self.name} надо провести полную диагностику."
+        else:
+            return f"{self.name} лучше не покупать."
