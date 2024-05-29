@@ -1,3 +1,5 @@
+import math
+
 class Vehicle:
 
     def __init__(self, name, mileage: int):
@@ -27,7 +29,6 @@ class Vehicle:
 
 
 class Monitor:
-
     def __init__(self, brand, model, x: int, y: int, frequency, matrix):
         self.brand = brand
         self.model = model
@@ -66,3 +67,7 @@ class Monitor:
         else:
             self.state = "Выключен"
             return "Монитор выключен"
+
+    def get_aspect_ratio(self):
+        gcd = math.gcd(self.x, self.y)
+        return f"{self.x // gcd}:{self.y // gcd}"
