@@ -51,6 +51,8 @@ class Monitor:
             return self.frequency
         elif name_of_data == "matrix":
             return self.matrix
+        elif name_of_data == "state":
+            return self.state
         else:
             return None
 
