@@ -24,3 +24,14 @@ class Vehicle:
             return f"{self.name} надо провести полную диагностику."
         else:
             return f"{self.name} лучше не покупать."
+
+
+class Monitor:
+
+    def __init__(self, brand, model, x: int, y: int, frequency, matrix):
+        self.brand = brand
+        self.model = model
+        self.x = x
+        self.y = y
+        self.frequency = frequency
+        self.matrix = matrix
