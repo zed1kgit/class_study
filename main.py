@@ -35,6 +35,7 @@ class Monitor:
         self.y = y
         self.frequency = frequency
         self.matrix = matrix
+        self.state = "Выключен"
 
     def get_data(self, name_of_data):
         if name_of_data == "brand":
@@ -51,3 +52,17 @@ class Monitor:
             return self.matrix
         else:
             return None
+
+    def turn_on(self):
+        if self.state == "Включен":
+            return "Монитор уже включен"
+        else:
+            self.state = "Включен"
+            return "Монитор включен"
+
+    def turn_off(self):
+        if self.state == "Выключен":
+            return "Монитор уже выключен"
+        else:
+            self.state = "Выключен"
+            return "Монитор выключен"
