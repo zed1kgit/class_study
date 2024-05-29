@@ -35,3 +35,19 @@ class Monitor:
         self.y = y
         self.frequency = frequency
         self.matrix = matrix
+
+    def get_data(self, name_of_data):
+        if name_of_data == "brand":
+            return self.brand
+        elif name_of_data == "model":
+            return self.model
+        elif name_of_data == "x":
+            return self.x
+        elif name_of_data == "y":
+            return self.y
+        elif name_of_data == "frequency":
+            return self.frequency
+        elif name_of_data == "matrix":
+            return self.matrix
+        else:
+            return None
